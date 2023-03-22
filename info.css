@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffe3e2;
+}
+
+.container {
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.input-box:nth-child(2n) {
+    justify-content: left;
+}
+
+.input-box input {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.input-box input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    margin: 15px 0;
+}
+
+.button-container button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, rgb(241, 222, 113), #ffbbda);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container a {
+    text-decoration: none;
+    color: #888;
+    font-size: large;
+}
+
+.button-container button:hover {
+    background-image: linear-gradient(to right, #ffbbda, rgb(241, 222, 113));
+    color: #888;
+}
+
+@media(max-width:600px) {
+    .container {
+        min-width: 240px;
+    }
+
+    .content {
+        max-height: 100%;
+        overflow: auto;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .input-box:nth-child(2n) {
+        justify-content: space-between;
+    }
+
+    .gender-category {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    .content::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.main__btn {
+    font-size: 1rem;
+    background-image: radial-gradient(circle, #f77062 0%, #fe5196 100%, #b721ff 0%, #21d4fd 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    margin-left: 5.5rem;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4837ff;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #F5EAEA;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    /* Could be more or less, depending on screen size */
+    animation: forwards;
+}
+
+.modal-content p {
+    font-size: 19px;
+}
+
+.modal-content p:nth-of-type(2){
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 7.5rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}

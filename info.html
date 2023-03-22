@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="info.css">
+    <title>Information</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="error"></div>
+        <form action="/" method="GET" required>
+            <h2>Information</h2>
+            <div class="write__content">
+                <div class="input-box">
+                    <label for="name">Full name:</label>
+                    <input type="text" minlength="8" placeholder="Enter full name" id="name" name="name" required>
+                </div>
+                <div class="input-box">
+                    <label for="contact">Contact number:</label>
+                    <input type="mobile" minlength="10" maxlength="11" placeholder="Enter your number" id="number" name="number" required>
+                </div>
+                <div class="input-box">
+                    <label for="address">Street & Sitio/Barangay:</label>
+                    <input type="text" placeholder="Enter your address" name="address" title="Must contain an '@' " required>
+                    <select id="municipality" style="cursor: pointer;" >
+                        <option value="address">Municipality:</option>
+                        <option value="Hilongos">Hilongos</option>
+                        <option value="Bato">Bato</option>
+                        <option value="Hindang">Hindang</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button type="" id="">Submit</button>
+                </div>
+                <!-- Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Your order will be delivered as soon as possible...</p>
+                        <br> <br>
+                        <p>Thank you!</p>
+                        <button class="main__btn">
+                            <a href="index.html">Back to homepage.</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="modal.js">
+
+    </script>
+</body>
+
+</html>
